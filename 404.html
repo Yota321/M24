@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Marvel | Official Site</title>
+    <script>
+        // Redirect 404s to the index.html with the correct path preserved
+        var path = window.location.pathname;
+        
+        // If we're in the M24 subdirectory, preserve it
+        if (path.includes('/M24/')) {
+            // Remove trailing slash if present and redirect to index
+            var newPath = path.replace(/\/$/, '');
+            if (newPath === '/M24') {
+                window.location.replace('/M24/');
+            } else {
+                // For other paths in M24, redirect to M24 home
+                window.location.replace('/M24/');
+            }
+        } else {
+            // For root, redirect to index
+            window.location.replace('/');
+        }
+    </script>
+</head>
+<body>
+    Redirecting...
+</body>
+</html>
