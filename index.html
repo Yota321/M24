@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>MARVEL × A24</title>
 
-  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
@@ -17,106 +16,115 @@
   <!-- NAV -->
   <nav class="nav">
     <div class="nav-brand">MARVEL</div>
-    <ul class="nav-links">
-      <li>Films</li>
-      <li>Series</li>
-      <li>Collections</li>
-    </ul>
+    <div class="nav-links">
+      <span>Films</span>
+      <span>Series</span>
+      <span>Archive</span>
+      <span>Collections</span>
+    </div>
   </nav>
 
   <!-- HERO -->
-  <header class="hero">
-    <h1 class="hero-title">MARVEL</h1>
-    <p class="hero-subtitle">
-      A film studio shaped by character, consequence, and quiet confidence.
+  <section class="hero">
+    <h1>MARVEL</h1>
+    <p>
+      Independent cinema at blockbuster scale.
+      Stories shaped by consequence, not spectacle.
     </p>
+  </section>
 
-    <div class="hero-actions">
-      <button class="btn-primary">Now Playing</button>
-      <button class="btn-secondary">Upcoming</button>
-    </div>
-  </header>
-
-  <!-- FILMS -->
+  <!-- NOW SHOWING -->
   <section class="section">
-    <div class="section-header">
-      <h2>FEATURE FILMS</h2>
+    <div class="section-head">
+      <h2>Now Showing</h2>
       <span>In theatres worldwide</span>
     </div>
 
-    <div class="poster-grid">
+    <div class="poster-grid large">
       <div class="poster">
-        <img src="images/loki-poster.png" alt="Loki">
+        <img src="images/loki-poster.png">
         <div class="poster-info">
           <span>Loki</span>
-          <button class="btn-small">Buy Tickets</button>
+          <button>Buy Tickets</button>
         </div>
       </div>
 
       <div class="poster">
-        <img src="images/wakanda-poster.png" alt="Wakanda">
+        <img src="images/wakanda-poster.png">
         <div class="poster-info">
           <span>Wakanda</span>
-          <button class="btn-small">Buy Tickets</button>
-        </div>
-      </div>
-
-      <div class="poster">
-        <img src="images/odinson-poster.png" alt="Odinson">
-        <div class="poster-info">
-          <span>Odinson</span>
-          <button class="btn-small">Buy Tickets</button>
-        </div>
-      </div>
-
-      <div class="poster">
-        <img src="images/peter-movie-poster.png" alt="Peter">
-        <div class="poster-info">
-          <span>Peter</span>
-          <button class="btn-small">Buy Tickets</button>
+          <button>Buy Tickets</button>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- FEATURED SERIES -->
+  <!-- EDITORIAL BREAK -->
+  <section class="editorial">
+    <p>
+      Marvel Studios presents a new era of filmmaking.
+      Fewer releases. Deeper stories.
+      Films that linger longer than the credits.
+    </p>
+  </section>
+
+  <!-- FEATURES -->
+  <section class="section">
+    <div class="poster-grid large">
+      <div class="poster">
+        <img src="images/odinson-poster.png">
+        <div class="poster-info">
+          <span>Odinson</span>
+          <button>Buy Tickets</button>
+        </div>
+      </div>
+
+      <div class="poster">
+        <img src="images/peter-movie-poster.png">
+        <div class="poster-info">
+          <span>Peter</span>
+          <button>Buy Tickets</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERIES -->
   <section class="feature">
-    <img src="images/netflix-odinson.png" alt="Odinson Series">
+    <img src="images/netflix-odinson.png">
 
     <div class="feature-text">
       <h2>ODINSON</h2>
       <p>
-        A limited series exploring grief, legacy, and the cost of power.
-        Streaming exclusively on Netflix.
+        A limited series examining grief, legacy,
+        and what remains when the myth fades.
       </p>
 
-      <a href="https://www.netflix.com" target="_blank" class="btn-primary">
+      <a href="https://www.netflix.com" target="_blank">
         Watch on Netflix
       </a>
     </div>
   </section>
 
-  <!-- PRODUCTS -->
+  <!-- COLLECTIONS -->
   <section class="section">
-    <div class="section-header">
-      <h2>OFFICIAL COLLECTIONS</h2>
+    <div class="section-head">
+      <h2>Collections</h2>
       <span>Designed with restraint</span>
     </div>
 
     <div class="product-grid">
-      <div class="product">
-        <img src="images/product-dvd-case.png" alt="DVD">
-        <button class="btn-small">Buy</button>
+      <div>
+        <img src="images/product-dvd-case.png">
+        <button>Buy</button>
       </div>
-
-      <div class="product">
-        <img src="images/product-tote-bags.png" alt="Tote">
-        <button class="btn-small">Buy</button>
+      <div>
+        <img src="images/product-tote-bags.png">
+        <button>Buy</button>
       </div>
-
-      <div class="product">
-        <img src="images/product-tshirt.png" alt="T-shirt">
-        <button class="btn-small">Buy</button>
+      <div>
+        <img src="images/product-tshirt.png">
+        <button>Buy</button>
       </div>
     </div>
   </section>
@@ -124,7 +132,7 @@
   <!-- FOOTER -->
   <footer class="footer">
     <span>© MARVEL STUDIOS</span>
-    <span>Reimagined under A24</span>
+    <span>A24 Partnership Concept</span>
   </footer>
 
   <script src="index.js"></script>
