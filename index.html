@@ -23,7 +23,7 @@
         <span>Comics</span>
         <span>News</span>
         <span>Archive</span>
-        <span>Collections</span>
+        <span>Shop</span>
       </div>
     </div>
   </nav>
@@ -40,7 +40,7 @@
 
         <div class="hero-actions">
           <button type="button">Now Showing</button>
-          <button type="button" class="outline">Studio News</button>
+          <button type="button" class="outline">Latest News</button>
         </div>
       </div>
 
@@ -59,25 +59,31 @@
       </div>
 
       <div class="poster-grid">
-        <div class="poster">
-          <img src="images/loki-poster.png" alt="Loki poster">
-          <div class="poster-info">
+        <div class="poster-card">
+          <div class="poster-frame">
+            <img src="images/loki-poster.png" alt="Loki poster">
+          </div>
+          <div class="poster-meta">
             <span>Loki</span>
             <button type="button">Buy Tickets</button>
           </div>
         </div>
 
-        <div class="poster">
-          <img src="images/wakanda-poster.png" alt="Wakanda poster">
-          <div class="poster-info">
+        <div class="poster-card">
+          <div class="poster-frame">
+            <img src="images/wakanda-poster.png" alt="Wakanda poster">
+          </div>
+          <div class="poster-meta">
             <span>Wakanda</span>
             <button type="button">Buy Tickets</button>
           </div>
         </div>
 
-        <div class="poster">
-          <img src="images/peter-movie-poster.png" alt="Peter poster">
-          <div class="poster-info">
+        <div class="poster-card">
+          <div class="poster-frame">
+            <img src="images/peter-movie-poster.png" alt="Peter poster">
+          </div>
+          <div class="poster-meta">
             <span>Peter</span>
             <button type="button">Buy Tickets</button>
           </div>
@@ -87,9 +93,11 @@
   </section>
 
   <!-- FEATURE SERIES -->
-  <section class="section">
+  <section class="section muted">
     <div class="container feature">
-      <img src="images/netflix-odinson.png" alt="Odinson Netflix series">
+      <div class="feature-media">
+        <img src="images/netflix-odinson.png" alt="Odinson Netflix series">
+      </div>
 
       <div class="feature-text">
         <h2>ODINSON</h2>
@@ -97,7 +105,6 @@
           A limited series examining grief, legacy,
           and what remains when the myth fades.
         </p>
-
         <a href="https://www.netflix.com" target="_blank" rel="noopener">
           Watch on Netflix
         </a>
@@ -105,28 +112,62 @@
     </div>
   </section>
 
-  <!-- STUDIO NEWS -->
+  <!-- EDITORIAL / BLOG -->
   <section class="section">
+    <div class="container editorial-grid">
+      <article>
+        <h3>The Return of Character-Driven Blockbusters</h3>
+        <p>
+          Marvel shifts focus toward fewer releases,
+          allowing stories to breathe and resonate.
+        </p>
+      </article>
+
+      <article>
+        <h3>Why Comics Still Matter</h3>
+        <p>
+          From page to screen, comics remain the
+          narrative backbone of the studio.
+        </p>
+      </article>
+
+      <article>
+        <h3>Inside the New Marvel Studio Model</h3>
+        <p>
+          Smaller teams. Creator-led projects.
+          Long-term storytelling over spectacle.
+        </p>
+      </article>
+    </div>
+  </section>
+
+  <!-- PRODUCTS -->
+  <section class="section muted">
     <div class="container">
       <div class="section-head">
-        <h2>Studio News</h2>
-        <span>Editorial updates</span>
+        <h2>Shop</h2>
+        <span>Limited collections</span>
       </div>
 
-      <ul class="news-list">
-        <li>
-          <strong>Marvel announces reduced slate for 2026</strong>
-          <span>Fewer films. Greater focus.</span>
-        </li>
-        <li>
-          <strong>Odinson enters limited theatrical run</strong>
-          <span>Select cinemas worldwide.</span>
-        </li>
-        <li>
-          <strong>Marvel Comics relaunches creator-led imprint</strong>
-          <span>Standalone stories return.</span>
-        </li>
-      </ul>
+      <div class="product-grid">
+        <div class="product-card">
+          <img src="images/product-dvd-case.png" alt="DVD Case">
+          <span>Collector’s DVD</span>
+          <button type="button">Buy</button>
+        </div>
+
+        <div class="product-card">
+          <img src="images/product-tote-bags.png" alt="Tote Bag">
+          <span>Tote Bag</span>
+          <button type="button">Buy</button>
+        </div>
+
+        <div class="product-card">
+          <img src="images/product-tshirt.png" alt="T-Shirt">
+          <span>T-Shirt</span>
+          <button type="button">Buy</button>
+        </div>
+      </div>
     </div>
   </section>
 
