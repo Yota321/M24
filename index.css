@@ -1,17 +1,16 @@
 :root {
-  --bg: #0b0b0b;
-  --fg: #f4f4f4;
-  --muted: #9a9a9a;
-  --border: rgba(255,255,255,0.1);
+  --bg: #f6f6f4;
+  --fg: #111;
+  --muted: #666;
+  --border: #ddd;
 }
 
 * {
-  margin: 0;
-  padding: 0;
   box-sizing: border-box;
 }
 
 body {
+  margin: 0;
   background: var(--bg);
   color: var(--fg);
   font-family: Inter, sans-serif;
@@ -19,79 +18,49 @@ body {
 
 /* NAV */
 .nav {
+  padding: 2rem 3rem;
   display: flex;
   justify-content: space-between;
-  padding: 1.5rem 2rem;
   border-bottom: 1px solid var(--border);
 }
 
 .nav-brand {
   font-family: "Playfair Display", serif;
-  letter-spacing: 0.2em;
+  font-size: 1.5rem;
+  letter-spacing: 0.3em;
 }
 
 .nav-links {
   display: flex;
   gap: 2rem;
-  list-style: none;
   font-size: 0.9rem;
   color: var(--muted);
 }
 
 /* HERO */
 .hero {
-  padding: 6rem 2rem;
-  text-align: center;
+  padding: 8rem 3rem 6rem;
+  max-width: 900px;
 }
 
-.hero-title {
+.hero h1 {
   font-family: "Playfair Display", serif;
-  font-size: clamp(4rem, 9vw, 7rem);
-  letter-spacing: 0.18em;
+  font-size: 5rem;
+  letter-spacing: 0.25em;
 }
 
-.hero-subtitle {
-  max-width: 700px;
-  margin: 2rem auto;
+.hero p {
+  margin-top: 2rem;
   color: var(--muted);
-}
-
-.hero-actions {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-}
-
-/* BUTTONS */
-button, .btn-primary {
-  background: #fff;
-  color: #000;
-  border: none;
-  padding: 0.7rem 1.4rem;
-  cursor: pointer;
-  font-size: 0.85rem;
-}
-
-.btn-secondary {
-  background: transparent;
-  color: var(--fg);
-  border: 1px solid var(--border);
-}
-
-.btn-small {
-  background: transparent;
-  color: var(--fg);
-  border: 1px solid var(--border);
-  padding: 0.4rem 0.8rem;
-  font-size: 0.75rem;
+  font-size: 1.1rem;
 }
 
 /* SECTIONS */
 .section {
-  padding: 4rem 2rem;
+  padding: 5rem 3rem;
 }
 
-.section-header {
+.section-head {
   display: flex;
   justify-content: space-between;
   margin-bottom: 2rem;
@@ -99,49 +68,52 @@ button, .btn-primary {
 }
 
 /* POSTERS */
-.poster-grid {
+.poster-grid.large {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-  gap: 1.5rem;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2.5rem;
 }
 
 .poster {
   position: relative;
-  aspect-ratio: 2 / 3;
-  overflow: hidden;
 }
 
 .poster img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.6s ease;
+  display: block;
 }
 
 .poster-info {
-  position: absolute;
-  inset: 0;
+  margin-top: 0.8rem;
   display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  padding: 1rem;
-  background: rgba(0,0,0,0);
-  transition: background 0.4s ease;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.poster:hover img {
-  transform: scale(1.08);
+.poster-info span {
+  font-family: "Playfair Display", serif;
 }
 
-.poster:hover .poster-info {
-  background: rgba(0,0,0,0.45);
+.poster-info button {
+  background: none;
+  border: 1px solid var(--border);
+  padding: 0.4rem 0.8rem;
+  cursor: pointer;
+}
+
+/* EDITORIAL */
+.editorial {
+  padding: 6rem 3rem;
+  max-width: 800px;
+  font-family: "Playfair Display", serif;
+  font-size: 1.8rem;
 }
 
 /* FEATURE */
 .feature {
+  padding: 6rem 3rem;
   display: grid;
-  gap: 2rem;
-  padding: 4rem 2rem;
+  gap: 3rem;
 }
 
 .feature img {
@@ -150,51 +122,40 @@ button, .btn-primary {
 
 .feature-text h2 {
   font-family: "Playfair Display", serif;
-  font-size: 2.5rem;
+  font-size: 3rem;
 }
 
-.feature-text p {
-  margin: 1rem 0 2rem;
-  color: var(--muted);
-}
-
-@media (min-width: 768px) {
-  .feature {
-    grid-template-columns: 1.2fr 1fr;
-    align-items: center;
-  }
+.feature-text a {
+  display: inline-block;
+  margin-top: 1.5rem;
+  border-bottom: 1px solid var(--fg);
+  text-decoration: none;
+  color: var(--fg);
 }
 
 /* PRODUCTS */
 .product-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
 }
 
-.product img {
+.product-grid img {
   width: 100%;
-  margin-bottom: 0.5rem;
+}
+
+.product-grid button {
+  margin-top: 0.5rem;
+  background: none;
+  border: 1px solid var(--border);
+  padding: 0.4rem;
 }
 
 /* FOOTER */
 .footer {
-  padding: 2rem;
-  border-top: 1px solid var(--border);
+  padding: 3rem;
   display: flex;
   justify-content: space-between;
-  font-size: 0.8rem;
+  border-top: 1px solid var(--border);
   color: var(--muted);
-}
-
-/* SCROLL ANIMATION */
-.hidden {
-  opacity: 0;
-  transform: translateY(25px);
-}
-
-.show {
-  opacity: 1;
-  transform: translateY(0);
-  transition: all 0.8s ease;
 }
