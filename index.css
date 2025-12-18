@@ -18,29 +18,36 @@ body {
 
 /* NAV */
 .nav {
-  padding: 2rem 3rem;
+  padding: 2.8rem 3rem;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   border-bottom: 1px solid var(--border);
 }
 
 .nav-brand {
   font-family: "Playfair Display", serif;
-  font-size: 1.5rem;
-  letter-spacing: 0.3em;
+  font-size: 1.6rem;
+  letter-spacing: 0.35em;
 }
 
 .nav-links {
   display: flex;
-  gap: 2rem;
-  font-size: 0.9rem;
+  gap: 2.5rem;
+  font-size: 0.95rem;
   color: var(--muted);
 }
 
 /* HERO */
 .hero {
-  padding: 8rem 3rem 6rem;
-  max-width: 900px;
+  padding: 6rem 3rem;
+}
+
+.hero-split {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 4rem;
+  align-items: center;
 }
 
 .hero h1 {
@@ -51,8 +58,34 @@ body {
 
 .hero p {
   margin-top: 2rem;
+  max-width: 520px;
   color: var(--muted);
   font-size: 1.1rem;
+}
+
+.hero-actions {
+  margin-top: 2.5rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.hero-actions button {
+  background: var(--fg);
+  color: var(--bg);
+  border: none;
+  padding: 0.7rem 1.4rem;
+  cursor: pointer;
+}
+
+.hero-actions .outline {
+  background: none;
+  color: var(--fg);
+  border: 1px solid var(--border);
+}
+
+.hero-media img {
+  width: 100%;
+  max-width: 360px;
 }
 
 /* SECTIONS */
@@ -68,19 +101,17 @@ body {
 }
 
 /* POSTERS */
-.poster-grid.large {
+.poster-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 2.5rem;
-}
-
-.poster {
-  position: relative;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  max-width: 1200px;
 }
 
 .poster img {
   width: 100%;
-  display: block;
+  aspect-ratio: 2 / 3;
+  object-fit: cover;
 }
 
 .poster-info {
@@ -98,7 +129,6 @@ body {
   background: none;
   border: 1px solid var(--border);
   padding: 0.4rem 0.8rem;
-  cursor: pointer;
 }
 
 /* EDITORIAL */
@@ -113,7 +143,9 @@ body {
 .feature {
   padding: 6rem 3rem;
   display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
   gap: 3rem;
+  align-items: center;
 }
 
 .feature img {
@@ -125,12 +157,39 @@ body {
   font-size: 3rem;
 }
 
+.feature-text p {
+  margin: 1.2rem 0;
+  color: var(--muted);
+}
+
 .feature-text a {
   display: inline-block;
   margin-top: 1.5rem;
   border-bottom: 1px solid var(--fg);
   text-decoration: none;
   color: var(--fg);
+}
+
+/* NEWS */
+.news-list {
+  list-style: none;
+  max-width: 700px;
+  padding: 0;
+}
+
+.news-list li {
+  padding: 1.5rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.news-list strong {
+  display: block;
+  font-family: "Playfair Display", serif;
+}
+
+.news-list span {
+  color: var(--muted);
+  font-size: 0.9rem;
 }
 
 /* PRODUCTS */
