@@ -11,13 +11,13 @@
 
 body {
   margin: 0;
+  font-family: Inter, sans-serif;
   background: var(--bg);
   color: var(--fg);
-  font-family: Inter, sans-serif;
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 1000px;
   margin: 0 auto;
   padding: 0 1.5rem;
 }
@@ -30,8 +30,7 @@ body {
 .nav-inner {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  padding: 2rem 0;
+  padding: 1.8rem 0;
 }
 
 .nav-brand {
@@ -41,178 +40,141 @@ body {
 
 .nav-links {
   display: flex;
-  gap: 2rem;
-  font-size: 0.9rem;
+  gap: 1.8rem;
+  font-size: 0.85rem;
   color: var(--muted);
 }
 
 /* HERO */
 .hero {
-  padding: 5rem 0;
-}
-
-.hero-inner {
-  display: grid;
-  grid-template-columns: 1fr 360px;
-  gap: 3rem;
-  align-items: center;
+  padding: 4rem 0 2rem;
+  text-align: center;
 }
 
 .hero h1 {
   font-family: "Playfair Display", serif;
-  font-size: 4rem;
-  letter-spacing: 0.25em;
+  font-size: 3.5rem;
+  letter-spacing: 0.3em;
 }
 
 .hero p {
-  margin-top: 1.5rem;
-  max-width: 480px;
+  margin-top: 1.2rem;
   color: var(--muted);
 }
 
-.hero-actions {
-  margin-top: 2rem;
-  display: flex;
-  gap: 1rem;
+/* EDITORIAL */
+.editorial {
+  padding: 2rem 0;
 }
 
-.hero-actions button {
-  padding: 0.6rem 1.2rem;
-  border: 1px solid var(--border);
-  background: var(--fg);
-  color: var(--bg);
-}
-
-.hero-actions .outline {
-  background: none;
-  color: var(--fg);
-}
-
-.hero-media img {
-  width: 100%;
-  height: auto;
+.editorial p {
+  font-family: "Playfair Display", serif;
+  font-size: 1.4rem;
 }
 
 /* SECTIONS */
 .section {
-  padding: 4.5rem 0;
+  padding: 3rem 0;
 }
 
 .section.muted {
-  background: #f0f0ee;
+  background: #efefec;
 }
 
-.section-head {
+/* POSTERS — SMALL, CONTROLLED */
+.poster-list {
   display: flex;
-  justify-content: space-between;
-  margin-bottom: 2rem;
-  color: var(--muted);
-}
-
-/* POSTERS — FIXED */
-.poster-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  flex-direction: column;
   gap: 2rem;
 }
 
-.poster-frame {
-  background: #fff;
-  padding: 0.75rem;
-  border: 1px solid var(--border);
+.poster-item {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 1.5rem;
+  align-items: start;
 }
 
-.poster-frame img {
-  width: 100%;
+.poster-item img {
+  width: 120px;
   height: auto;
-  display: block;
 }
 
-.poster-meta {
-  margin-top: 0.8rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.poster-meta span {
+.poster-item strong {
   font-family: "Playfair Display", serif;
 }
 
-.poster-meta button {
+.poster-item span {
+  display: block;
+  margin: 0.4rem 0;
+  color: var(--muted);
+}
+
+.poster-item button {
   border: 1px solid var(--border);
   background: none;
-  padding: 0.4rem 0.8rem;
+  padding: 0.3rem 0.7rem;
 }
 
 /* FEATURE */
 .feature {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 3rem;
-  align-items: center;
+  grid-template-columns: 220px 1fr;
+  gap: 2rem;
+  align-items: start;
 }
 
-.feature-media img {
-  width: 100%;
+.feature img {
+  width: 220px;
   height: auto;
 }
 
-.feature-text h2 {
+.feature h2 {
   font-family: "Playfair Display", serif;
-  font-size: 2.5rem;
+  font-size: 2rem;
 }
 
-.feature-text p {
-  margin-top: 1rem;
+.feature p {
   color: var(--muted);
 }
 
-.feature-text a {
+.feature a {
   display: inline-block;
-  margin-top: 1.5rem;
-  border-bottom: 1px solid var(--fg);
+  margin-top: 1rem;
   text-decoration: none;
+  border-bottom: 1px solid var(--fg);
   color: var(--fg);
 }
 
-/* EDITORIAL */
-.editorial-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2.5rem;
-}
-
-.editorial-grid h3 {
-  font-family: "Playfair Display", serif;
-}
-
-.editorial-grid p {
+/* NEWS */
+.news-list {
+  list-style: disc;
+  padding-left: 1.2rem;
   color: var(--muted);
 }
 
-/* PRODUCTS */
-.product-grid {
+/* PRODUCTS — SMALL */
+.product-list {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
 }
 
-.product-card img {
-  width: 100%;
+.product-list img {
+  width: 100px;
   height: auto;
 }
 
-.product-card span {
+.product-list span {
   display: block;
-  margin-top: 0.6rem;
+  margin-top: 0.5rem;
 }
 
-.product-card button {
-  margin-top: 0.4rem;
+.product-list button {
+  margin-top: 0.3rem;
   border: 1px solid var(--border);
   background: none;
-  padding: 0.4rem;
+  padding: 0.3rem;
 }
 
 /* FOOTER */
@@ -223,6 +185,6 @@ body {
 .footer-inner {
   display: flex;
   justify-content: space-between;
-  padding: 2.5rem 0;
+  padding: 2rem 0;
   color: var(--muted);
 }
